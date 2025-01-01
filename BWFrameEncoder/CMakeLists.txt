@@ -192,8 +192,8 @@ if(TARGET_OS STREQUAL "windows")
         COMPONENT binaries
         DESTINATION OtherTools/BWFrameEncoder)
     
-    # Copy the needed data files
-    install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${DATA_DIR}/
+    # Copy the readme file
+    install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/Readme.txt
         DESTINATION OtherTools/BWFrameEncoder)
     
     # On Windows, copy the needed runtime files (DLLs)
@@ -207,8 +207,8 @@ else()
         COMPONENT binaries
         DESTINATION ${CMAKE_PROJECT_NAME}/OtherTools/BWFrameEncoder)
     
-    # Copy the needed data files
-    install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${DATA_DIR}/
+    # Copy the readme file
+    install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/Readme.txt
         DESTINATION ${CMAKE_PROJECT_NAME}/OtherTools/BWFrameEncoder)
 endif()
 
