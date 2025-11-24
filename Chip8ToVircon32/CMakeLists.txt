@@ -68,7 +68,7 @@ endif()
 
 # Set compilation flags for C and C++
 if (MINGW OR TARGET_OS STREQUAL "linux")
-    set(cxx_flags "${CMAKE_CXX_FLAGS} -std=c++0x -Wall -Wextra -Wno-unused-parameter")
+    set(cxx_flags "${CMAKE_CXX_FLAGS} -std=c++0x -Wall -Wextra -Wno-unused-parameter -static -static-libgcc -static-libstdc++")
     set(c_flags "${CMAKE_C_FLAGS} -Wall -Wextra -Wno-unused-parameter")
 elseif (MSVC)
     set(cxx_flags "${CMAKE_CXX_FLAGS} /W3 /EHsc /MP /GS /wd4267 /wd4244")
